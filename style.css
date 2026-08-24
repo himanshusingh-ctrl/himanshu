@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: arial, sans-serif;
+    background: #05050b;
+    color:#fff;
+    line-height: 1.6;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(5,5,11,.85);
+    backdrop-filter: blur(12px);
+}
+
+.logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    gap: 25px;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hovor{
+    color: #a855f7;
+}
+
+.hero{
+    min-height: 100vh;
+    padding: 140px 8% 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: 
+        radial-gradient(circle at 75% 45% rgba(139,92,246,.25), transparent 28%),
+        radial-gradient(circle at 90% 15% rgba(59,130,246,.18), transparent 25%),
+        #05050b;
+}
+
+.hero-text{
+    max-width: 620px;
+}
+
+.hello, .section-label{
+    color: #b06cff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1{
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.02;
+    margin: 10px 0;
+}
+
+.hero h1 span{
+    background: linear-gradient(90deg, #a855f7, #3b82f6);
+   background-clip: text;
+    color: transparent;
+}
+
+.hero h2{
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.hero-text > p:not(.hello){
+    color: #bdbdc7;
+    max-width: 560px;
+}
+
+.button{
+    display: flex;
+    gap: 15px;
+    margin: 28px 0;
+}
+
+.btn{
+    display: inline-block;
+    border: 1px solid #7c3aed;
+    padding: 12px 22px;
+    border-radius: 8px;
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.primary{
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+}
+
+.secondary{
+    background: transparent;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+}
+
+.socials{
+    display: flex;
+    gap: 20px;
+}
+
+.socials a{
+    color: #ddd;
+    text-decoration: none;
+}
+
+.hero-image{
+    width: min(400px, 90vw);
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image .glow{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    filter: blur(3px);
+    box-shadow: 0 0 80px #7c3aed;
+    z-index: 0;
+}
+
+.hero-image img{
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.section{
+    padding: 100px 8%;
+    text-align: center;
+    background: #fff;
+    color: #17171f;
+}
+
+.section h2{
+    font-size: 42px;
+    margin: 8px 0 25px;
+}
+
+.section-text{
+    max-width: 800px;
+    margin: 0 auto 15px;
+    color: #555;
+}
+
+.dark-section{
+    background: #0a0a12;
+    color: #fff;
+}
+
+.cards, .project-grid{
+    max-width: 1000px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card, .project, .education-box{
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba( 168, 85, 247, .25);
+    background: #aaa;
+}
+
+.card p, .project p, .education-box p{
+    color: #aaa;
+}
+
+.project{
+    text-align: left;
+    background: #f8f8fb;
+    color: #17171f;
+}
+
+.project span{
+    display: inline-block;
+    margin: 15px 6px 0 0;
+    padding: 15px 10px; 
+    border-radius: 20px;
+    background: #eee;
+    font-size: 13px;
+}
+
+.education-box{
+    max-width: 700px;
+    margin: 18px auto;
+    text-align: left;
+}
+
+form{
+    max-width: 700px;
+    margin: 30px auto 0;
+    display: grid;
+    gap: 15px;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font:inherit;
+}
+
+#formstatus{
+    min-height: 24px;
+}
+
+footer{
+    padding: 25px;
+    text-align: center;
+    background: #030307;
+    color: #aaa;
+}
+
+@media (max-width:800px){
+    .navbar{
+        flex-direction: column;
+        gap:15px
+    }
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 180px;
+    }
+    .buttons, .socials{
+        justify-content: center;
+    }
+    .cards, .project-grid{
+        grid-template-columns: 1fr;
+    }
+    .hero-image{
+        height: 420px;
+    }
+    .hero-image img{
+        width: 290px;
+        height: 370px;
+    }
+}
+
+
