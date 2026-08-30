@@ -160,6 +160,10 @@ nav a:hovor{
     border-radius: 50%;
 }
 
+.hero-image img:hover{
+    transform: scale(1.08);
+}
+
 .section{
     padding: 100px 8%;
     text-align: center;
