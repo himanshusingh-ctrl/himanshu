@@ -8,6 +8,9 @@
 
 <header class="navbar">
     <a href="#home" class="logo"> PORTFOLIO</a>
+
+    <button id="menu-toggle">☰</button>
+
 <nav>
     <a href="#home">home</a>
     <a href="#about">about</a>
@@ -16,6 +19,7 @@
     <a href="#educations">educations</a>
     <a href="#contact">contact</a>
 </nav>
+<button id="theme-toggle">☀️ Light Mode</button>
 </header>
 
 <main>
@@ -23,7 +27,7 @@
         <div class="hero-text">
         <P class="hello">Hello, I'm</P>
         <h1> Himanshu<br><span>Singh</span></h1>
-        <h2></h2> Aspiring web developer</h2>
+        <h2>I am <span id="typing-text"></span></h2>
         <p>I Am Learning Web Development And Building Modern, Responsive And Interactive Website.</p>
         <div class="buttons">
             <a href="#projects" class="btn primary">View My Work</a>
@@ -44,7 +48,7 @@
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
         <p class="section-label">ABOUT ME</p>
         <h2>WHO i Am</h2>
         <p class="section-text">
@@ -56,28 +60,36 @@
         </p>
     </section>
 
-    <section id="skills" class="section dark-section">
+    <section id="skills" class="section dark-section reveal">
         <p class="section-label">MY SKILLS</p>
         <h2>Technologies I Use</h2>
         <Div class="cards">
-            <div class="card"><h3>HTML</h3><p>Structure of Modern Website.</p></div>
-            <div class="card"><h3>CSS</h3><p>Responsive and attractive designs.</p></DIV>
-            <div class="card"><h3>JavaScript</h3><p>Intractive websites functionality.</p></div>
-            <div class="card"><h3>react.js</h3><p>building modern and interactive user interface using reusable components</p></div>
-            <div class="card"><h3>github</h3><p>version aur code ko manage/share k liye.</p></div>
-        </Div>
-    </section>
+        <div class="card">
+        <h3>HTML</h3><p>Structure of Modern Website.</p></div>
+        <div class="card"><h3>CSS</h3><p>Responsive and attractive designs.</p></DIV>
+        <div class="card"><h3>JavaScript</h3><p>Intractive websites functionality.</p></div>
+        <div class="card"><h3>react.js</h3><p>building modern and interactive user interface using reusable components</p></div>
+        <div class="card"><h3>github</h3><p>version aur code ko manage/share k liye.</p></div>
+    </div>
+    </section>  
 
-    <section id="projects" class="section">
+    <section id="projects" class="section reveal">
         <p class="section-label">MY PROJECT</p>
         <H2>Projects I'vs Built</H2>
+        <div class="project-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="html">HTML</button>
+    <button class="filter-btn" data-filter="css">CSS</button>
+    <button class="filter-btn" data-filter="javascript">JavaScript</button>
+    <button class="filter-btn" data-filter="react">React</button>
+</div>
         <div class="project-grid">
-            <article class="projects">
+            <article class="project" data-category="javascript"></article>
                 <h3>HS Clone website</h3>
                 <p>Fronted e-commerce project created to practice HTML, CSS  JavaScript.</p>
                 <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </article>
-            <articls class="project">
+            <article class="project" data-category="javascript"></article>
                 <h3>Personal Portfolio</h3>
                 <p>Responsive portfolio website with fronted and backend integration.</p>
                 <span>HTML</span><span>CSS</span><span>JavaScript</span>
@@ -85,7 +97,7 @@
         </div>
     </section>
 
-    <section id="education" class="section dark-section">
+    <section id="education" class="section dark-section reveal">
         <p class="section-label">EDUCATION</p>
         <h2>my education</h2>
         <div class="education-box">
@@ -105,7 +117,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
         <p class="section-label">CONTACT</p>
         <h2>Let's Connect</h2>
         <form id="contact form">
@@ -113,10 +125,12 @@
             <input type="email" id="email" placeholder="Himanshu639754@gmail.com">
             <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
             <button type="submit" class="btn primary">send message</button>
-            <p id="FormStatus"></p>
+            <p id="formStatus"></p>
         </form>
     </section>
     </main>
+
+     <button id="back-to-top">↑</button>
 
     <footer>
         <p>©2026 Himanshu Singh. All Rights Reserved.</p>
